@@ -97,6 +97,8 @@
         "product_2": {
           "type": "product",
           "settings": {
+            "image": "shopify://shop_images/model-laughs-barefoot.jpg",
+            "secondary_image": "shopify://shop_images/boots-on-blue.jpg",
             "title": "Product 2",
             "rating": 4,
             "review_count": "1,453 Reviews",
@@ -110,6 +112,8 @@
         "product_3": {
           "type": "product",
           "settings": {
+            "image": "shopify://shop_images/woman-infront-of-tree-with-berries.jpeg",
+            "secondary_image": "shopify://shop_images/a-model-in-khakis-holding-orchids.jpg",
             "title": "Product 3",
             "rating": 5,
             "review_count": "1,453 Reviews",
