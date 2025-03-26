@@ -1,20 +1,6 @@
 {%- style -%}
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
-
-  .bebas-neue {
-    font-family: "Bebas Neue", sans-serif;
-  }
-
-  .poppins {
-    font-family: "Poppins", sans-serif;
-  }
-
-  .font-source-black {
-    font-family: 'Source Serif 4', serif;
-    font-weight: 900;
-  }
-
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -27,262 +13,27 @@
     }
   }
 
-  .best-sellers {
-    padding: 2rem 0;
-  }
-
-  .best-sellers__heading {
-    padding: 0 2rem 0.5rem;
-    font-size: 40px;
-    font-weight: 900;
-    text-align: center;
-    font-family: 'Source Serif 4', serif;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__heading {
-      font-size: 3rem;
-      text-align: left;
-    }
-  }
-
-  .best-sellers__container {
-    padding: 1rem;
-    min-height: 100vh;
-  }
-
-  .best-sellers__grid-wrapper {
-    position: relative;
-    max-height: 1000px;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-  }
-
-  @media screen and (max-width: 1024px) {
-    #gridWrapper.collapsed {
-      max-height: 650px;
-    }
-    
-    #gridWrapper.expanded {
-      max-height: 2500px;
-    }
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__grid-wrapper {
-      max-height: none;
-    }
-  }
-
-  .best-sellers__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    padding-bottom: 1.5rem;
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .best-sellers__grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__grid {
-      grid-template-columns: repeat(10, 355px);
-    }
-  }
-
-  .best-sellers__product {
-    width: 100%;
-    aspect-ratio: 0.76;
-    border-radius: 0.5rem;
-    position: relative;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__product {
-      height: 467px;
-      aspect-ratio: auto;
-    }
-  }
-
-  .best-sellers__badge {
-    position: absolute;
-    background: white;
-    border: 1px solid black;
-    border-radius: 9999px;
-    top: 6px;
-    left: 6px;
-    text-transform: uppercase;
-    font-size: 10px;
-    padding: 2px 8px;
-    font-family: "Bebas Neue", sans-serif;
-  }
-
-  .best-sellers__badge--sale {
-    background: #5C7962;
-    color: white;
-    left: auto;
-    right: 6px;
-  }
-
-  .best-sellers__image-wrapper {
-    width: 100%;
-    height: 355px;
-    overflow: hidden;
-    border-radius: 10px;
-    aspect-ratio: 1;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__image-wrapper {
-      aspect-ratio: auto;
-    }
-  }
-
-  .best-sellers__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .best-sellers__content {
-    padding: 0.75rem;
-  }
-
-  .best-sellers__title {
-    text-transform: uppercase;
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-    font-family: "Bebas Neue", sans-serif;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__title {
-      font-size: 18px;
-    }
-  }
-
-  .best-sellers__rating {
-    display: flex;
-    margin-bottom: 0.5rem;
-  }
-
-  .best-sellers__stars {
-    display: flex;
-    align-items: center;
-  }
-
-  .best-sellers__star {
-    height: 9px;
-    width: 9px;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__star {
-      height: 12px;
-      width: 12px;
-    }
-  }
-
-  .best-sellers__reviews {
-    font-size: 11px;
-    margin-left: 0.5rem;
-    font-family: "Poppins", sans-serif;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__reviews {
-      font-size: 12px;
-    }
-  }
-
-  .best-sellers__price {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-  }
-
-  .best-sellers__scrollbar {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    height: 0.5rem;
-    background: rgba(243, 244, 246, 0.5);
-    border-radius: 9999px;
-    display: none;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__scrollbar {
-      display: block;
-    }
-  }
-
-  .best-sellers__scrollbar-thumb {
-    position: absolute;
-    height: 0.25rem;
-    background: rgba(156, 163, 175, 0.5);
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    width: 10%;
-  }
-
-  .best-sellers__scrollbar-thumb:hover {
-    height: 0.375rem;
-    background: rgba(107, 114, 128, 0.8);
-  }
-
-  .best-sellers__toggle {
-    margin-top: 1rem;
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-    background: #1C1D1D;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    transition: all 0.3s ease-in-out;
-    display: none;
-  }
-
-  .best-sellers__toggle:hover {
-    background: #374151;
-  }
-
-  @media screen and (min-width: 990px) {
-    .best-sellers__toggle {
-      display: none;
-    }
-  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
-  <div class="best-sellers">
-    <h2 class="best-sellers__heading">{{ section.settings.title }}</h2>
-    <div class="best-sellers__container">
-      <div id="gridWrapper" class="best-sellers__grid-wrapper">
-        <div id="productGrid" class="best-sellers__grid">
+  <div class="py-8">
+    <h2 class="px-8 pb-2 text-[28px] font-black text-center font-['Source_Serif_4'] md:text-[40px] md:text-left">{{ section.settings.title }}</h2>
+    <div class="p-4 relative">
+      <div id="gridWrapper" class="relative overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-[528px] md:max-h-none">
+        <div id="productGrid" class="grid grid-cols-2 gap-4 p-4 pb-6 w-full overflow-x-auto scrollbar-none md:grid-cols-[repeat(10,355px)]">
           {%- for block in section.blocks -%}
-            <div class="best-sellers__product" {{ block.shopify_attributes }}>
+            <div class="w-full aspect-square rounded-lg relative" {{ block.shopify_attributes }}>
               {%- if block.settings.badge_text != blank -%}
-                <div class="best-sellers__badge">{{ block.settings.badge_text }}</div>
+                <div class="absolute top-1.5 left-1.5 bg-white border border-black rounded-full text-[10px] uppercase py-1 px-2 font-['Bebas_Neue']">{{ block.settings.badge_text }}</div>
               {%- endif -%}
-              {%- if block.settings.sale_badge -%}
-                <div class="best-sellers__badge best-sellers__badge--sale">Sale</div>
+              {%- if block.settings.show_sale_badge -%}
+                <div class="absolute top-1.5 right-1.5 bg-[#5C7962] text-white rounded-full text-[10px] uppercase py-1 px-2.5 font-['Bebas_Neue']">{{ block.settings.sale_badge_text }}</div>
               {%- endif -%}
-              <div class="best-sellers__image-wrapper">
+              <div class="w-full h-full overflow-hidden rounded-lg">
                 {%- assign primary_image = block.settings.image | image_url: width: 800 -%}
                 {%- assign secondary_image = block.settings.secondary_image | image_url: width: 800 -%}
                 <img 
-                  class="best-sellers__image product-image"
+                  class="w-full h-full object-cover transition-opacity duration-300 ease-in-out product-image"
                   src="{{ primary_image }}"
                   alt="{{ block.settings.title | escape }}"
                   data-primary-img="{{ primary_image }}"
@@ -292,30 +43,30 @@
                   height="800"
                 >
               </div>
-              <div class="best-sellers__content">
-                <h3 class="best-sellers__title">{{ block.settings.title }}</h3>
-                <div class="best-sellers__rating">
-                  <div class="best-sellers__stars">
+              <div class="p-3">
+                <h3 class="text-[16px] uppercase mb-1 font-['Bebas_Neue'] lg:text-[18px]">{{ block.settings.title }}</h3>
+                <div class="flex mb-2">
+                  <div class="flex items-center">
                     {%- for i in (1..5) -%}
                       {%- if i <= block.settings.rating -%}
-                        <img src="{{ 'iconmonstr-star-filled.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
+                        <img src="{{ 'iconmonstr-star-filled.svg' | asset_url }}" alt="Star rating" class="h-[9px] w-[9px] md:h-3 md:w-3">
                       {%- else -%}
-                        <img src="{{ 'iconmonstr-star-lined.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
+                        <img src="{{ 'iconmonstr-star-lined.svg' | asset_url }}" alt="Star rating" class="h-[9px] w-[9px] md:h-3 md:w-3">
                       {%- endif -%}
                     {%- endfor -%}
                   </div>
-                  <span class="best-sellers__reviews">({{ block.settings.review_count }})</span>
+                  <span class="text-[10px] ml-2 font-['Poppins'] lg:text-[11px]">({{ block.settings.review_count }})</span>
                 </div>
-                <div class="best-sellers__price">{{ block.settings.price }}</div>
+                <div class="font-['Poppins'] font-medium">{{ block.settings.price }}</div>
               </div>
             </div>
           {%- endfor -%}
         </div>
-        <div class="best-sellers__scrollbar">
-          <div id="scrollbarThumb" class="best-sellers__scrollbar-thumb"></div>
+        <div class="absolute bottom-4 left-4 right-4 h-1 bg-gray-100/50 rounded-full hidden md:block">
+          <div id="scrollbarThumb" class="absolute h-1 bg-gray-400/50 rounded-full cursor-pointer transition-all duration-300 ease-in-out w-[10%] hover:h-[6px] hover:bg-gray-500/80"></div>
         </div>
       </div>
-      <button id="toggleButton" class="best-sellers__toggle" aria-expanded="false">Show More</button>
+      <button id="toggleButton" class="mx-auto mt-5 w-[327px] h-[54px] py-0 bg-[#1C1D1D] text-white font-['Poppins'] text-[16px] font-semibold leading-[140%] rounded-full transition-all duration-300 ease-in-out block text-center hover:bg-[#374151] md:hidden" aria-expanded="false">Show More</button>
     </div>
   </div>
 </div>
@@ -429,6 +180,27 @@
     {
       "name": "Best Sellers Scroll",
       "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
         {
           "type": "product"
         },

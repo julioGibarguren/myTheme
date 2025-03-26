@@ -66,8 +66,7 @@ class BestSellersScroll {
       thumbLeft = thumb.offsetLeft;
       
       // Add active state
-      thumb.style.height = '0.375rem';
-      thumb.style.background = 'rgba(107, 114, 128, 0.8)';
+      thumb.classList.add('h-[6px]', 'bg-gray-500/80');
     });
 
     const handleMouseMove = (e) => {
@@ -92,8 +91,7 @@ class BestSellersScroll {
     const handleMouseUp = () => {
       isDragging = false;
       // Remove active state
-      thumb.style.height = '0.25rem';
-      thumb.style.background = 'rgba(156, 163, 175, 0.5)';
+      thumb.classList.remove('h-[6px]', 'bg-gray-500/80');
     };
 
     // Add click handler for track
@@ -119,7 +117,14 @@ class BestSellersScroll {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
     container.addEventListener('scroll', updateScrollThumb);
-    window.addEventListener('resize', updateScrollThumb);
+    window.addEventListener('resize', () => {
+      updateScrollThumb();
+      // Ensure scroll position doesn't exceed container width
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      if (container.scrollLeft > maxScroll) {
+        container.scrollLeft = maxScroll;
+      }
+    });
 
     // Initial setup
     updateScrollThumb();
@@ -131,32 +136,42 @@ class BestSellersScroll {
 
     if (!wrapper || !toggleButton) return;
 
+    // Set initial state
+    if (window.innerWidth < 1024) {
+      wrapper.classList.add('max-h-[528px]');
+      wrapper.classList.remove('max-h-[2500px]');
+      toggleButton.style.display = 'block';
+    } else {
+      wrapper.classList.remove('max-h-[528px]', 'max-h-[2500px]');
+      toggleButton.style.display = 'none';
+    }
+
     toggleButton.addEventListener('click', () => {
-      const isExpanded = wrapper.classList.contains('expanded');
+      const isExpanded = wrapper.classList.contains('max-h-[2500px]');
 
       if (isExpanded) {
-        wrapper.classList.remove('expanded');
-        wrapper.classList.add('collapsed');
+        wrapper.classList.remove('max-h-[2500px]');
+        wrapper.classList.add('max-h-[528px]');
         toggleButton.textContent = 'Show More';
         toggleButton.setAttribute('aria-expanded', 'false');
         wrapper.scrollIntoView({ behavior: 'smooth' });
       } else {
-        wrapper.classList.remove('collapsed');
-        wrapper.classList.add('expanded');
+        wrapper.classList.remove('max-h-[528px]');
+        wrapper.classList.add('max-h-[2500px]');
         toggleButton.textContent = 'Show Less';
         toggleButton.setAttribute('aria-expanded', 'true');
       }
     });
 
-    if (window.innerWidth < 1024) {
-      wrapper.classList.add('collapsed');
-    }
-
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 1024) {
-        wrapper.classList.remove('collapsed', 'expanded');
-      } else if (!wrapper.classList.contains('expanded')) {
-        wrapper.classList.add('collapsed');
+        wrapper.classList.remove('max-h-[650px]', 'max-h-[2500px]');
+        toggleButton.style.display = 'none';
+      } else {
+        toggleButton.style.display = 'block';
+        if (!wrapper.classList.contains('max-h-[2500px]')) {
+          wrapper.classList.add('max-h-[650px]');
+        }
       }
     });
   }
