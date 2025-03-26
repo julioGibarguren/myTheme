@@ -265,13 +265,15 @@
               
               <div class="best-sellers__image-wrapper">
                 {%- if block.settings.image != blank -%}
+                  {%- assign primary_image = block.settings.image | image_url: width: 355 -%}
+                  {%- assign secondary_image = block.settings.secondary_image | default: block.settings.image | image_url: width: 355 -%}
                   {{ block.settings.image | image_url: width: 355 | image_tag:
                     loading: 'lazy',
                     class: 'best-sellers__image product-image',
                     width: 355,
                     height: 355,
-                    data_primary_img: block.settings.image | image_url: width: 355,
-                    data_secondary_img: block.settings.secondary_image | default: block.settings.image | image_url: width: 355
+                    data_primary_img: primary_image,
+                    data_secondary_img: secondary_image
                   }}
                 {%- endif -%}
               </div>
