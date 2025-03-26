@@ -288,9 +288,9 @@
                     {%- for i in (1..5) -%}
                       <li>
                         {%- if i <= block.settings.rating -%}
-                          {{ 'iconmonstr-star-filled.svg' | asset_url | img_tag: 'Star rating', 'best-sellers__star' }}
+                          <img src="{{ 'iconmonstr-star-filled.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
                         {%- else -%}
-                          {{ 'iconmonstr-star-lined.svg' | asset_url | img_tag: 'Star rating', 'best-sellers__star' }}
+                          <img src="{{ 'iconmonstr-star-lined.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
                         {%- endif -%}
                       </li>
                     {%- endfor -%}
