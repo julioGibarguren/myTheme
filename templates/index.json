@@ -109,6 +109,36 @@
             "sale_badge_text": "Save 15%"
           }
         },
+        "product_pzyxTa": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
+            "title": "Product name",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
+        "product_6nWFUX": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/autumn-photographer-taking-picture.jpg",
+            "secondary_image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "title": "Product name",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
         "product_3": {
           "type": "product",
           "settings": {
@@ -123,12 +153,30 @@
             "show_sale_badge": true,
             "sale_badge_text": "Save 15%"
           }
+        },
+        "product_b8pJkq": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/model-in-neutral-colors-by-window.jpg",
+            "secondary_image": "shopify://shop_images/stylish-summer-necklace.jpg",
+            "title": "Product 3",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": true,
+            "sale_badge_text": "Save 15%"
+          }
         }
       },
       "block_order": [
         "product_1",
         "product_2",
-        "product_3"
+        "product_pzyxTa",
+        "product_6nWFUX",
+        "product_3",
+        "product_b8pJkq"
       ],
       "settings": {
         "title": "Best Sellers",
