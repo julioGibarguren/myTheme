@@ -266,80 +266,61 @@
 
 <div class="section-{{ section.id }}-padding">
   <div class="best-sellers">
-    {%- if section.settings.title != blank -%}
-      <h2 class="best-sellers__heading font-source-black">{{ section.settings.title }}</h2>
-    {%- endif -%}
-
+    <h2 class="best-sellers__heading">{{ section.settings.title }}</h2>
     <div class="best-sellers__container">
-      <div class="best-sellers__grid-wrapper" id="gridWrapper">
-        <div class="best-sellers__grid" id="productGrid">
+      <div id="gridWrapper" class="best-sellers__grid-wrapper">
+        <div id="productGrid" class="best-sellers__grid">
           {%- for block in section.blocks -%}
-            <article class="best-sellers__product" {{ block.shopify_attributes }}>
-              {%- if block.settings.show_badge -%}
-                <span class="best-sellers__badge">{{ block.settings.badge_text }}</span>
+            <div class="best-sellers__product" {{ block.shopify_attributes }}>
+              {%- if block.settings.badge_text != blank -%}
+                <div class="best-sellers__badge">{{ block.settings.badge_text }}</div>
               {%- endif -%}
-              {%- if block.settings.show_sale_badge -%}
-                <span class="best-sellers__badge best-sellers__badge--sale">{{ block.settings.sale_badge_text }}</span>
+              {%- if block.settings.sale_badge -%}
+                <div class="best-sellers__badge best-sellers__badge--sale">Sale</div>
               {%- endif -%}
-              
               <div class="best-sellers__image-wrapper">
-                {%- if block.settings.image != blank -%}
-                  {%- assign primary_image = block.settings.image | image_url: width: 355 -%}
-                  {%- assign secondary_image = block.settings.secondary_image | default: block.settings.image | image_url: width: 355 -%}
-                  {{ block.settings.image | image_url: width: 355 | image_tag:
-                    loading: 'lazy',
-                    class: 'best-sellers__image product-image',
-                    width: 355,
-                    height: 355,
-                    data_primary_img: primary_image,
-                    data_secondary_img: secondary_image
-                  }}
-                {%- endif -%}
+                {%- assign primary_image = block.settings.image | image_url: width: 800 -%}
+                {%- assign secondary_image = block.settings.secondary_image | image_url: width: 800 -%}
+                <img 
+                  class="best-sellers__image product-image"
+                  src="{{ primary_image }}"
+                  alt="{{ block.settings.title | escape }}"
+                  data-primary-img="{{ primary_image }}"
+                  data-secondary-img="{{ secondary_image }}"
+                  loading="lazy"
+                  width="800"
+                  height="800"
+                >
               </div>
-
               <div class="best-sellers__content">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="best-sellers__title">{{ block.settings.title }}</h3>
-                {%- endif -%}
-
+                <h3 class="best-sellers__title">{{ block.settings.title }}</h3>
                 <div class="best-sellers__rating">
-                  <ul class="best-sellers__stars">
+                  <div class="best-sellers__stars">
                     {%- for i in (1..5) -%}
-                      <li>
-                        {%- if i <= block.settings.rating -%}
-                          <img src="{{ 'iconmonstr-star-filled.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
-                        {%- else -%}
-                          <img src="{{ 'iconmonstr-star-lined.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
-                        {%- endif -%}
-                      </li>
+                      {%- if i <= block.settings.rating -%}
+                        <img src="{{ 'iconmonstr-star-filled.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
+                      {%- else -%}
+                        <img src="{{ 'iconmonstr-star-lined.svg' | asset_url }}" alt="Star rating" class="best-sellers__star">
+                      {%- endif -%}
                     {%- endfor -%}
-                  </ul>
-                  {%- if block.settings.review_count != blank -%}
-                    <p class="best-sellers__reviews">{{ block.settings.review_count }} Reviews</p>
-                  {%- endif -%}
+                  </div>
+                  <span class="best-sellers__reviews">({{ block.settings.review_count }})</span>
                 </div>
-
-                {%- if block.settings.price != blank -%}
-                  <p class="best-sellers__price">{{ block.settings.price }}</p>
-                {%- endif -%}
+                <div class="best-sellers__price">{{ block.settings.price }}</div>
               </div>
-            </article>
+            </div>
           {%- endfor -%}
         </div>
-
         <div class="best-sellers__scrollbar">
-          <div class="best-sellers__scrollbar-thumb" id="scrollbarThumb"></div>
+          <div id="scrollbarThumb" class="best-sellers__scrollbar-thumb"></div>
         </div>
       </div>
-
-      <button class="best-sellers__toggle" id="toggleButton" aria-expanded="false">
-        Show More
-      </button>
+      <button id="toggleButton" class="best-sellers__toggle" aria-expanded="false">Show More</button>
     </div>
   </div>
 </div>
 
-<script src="{{ 'best-sellers-scroll.js' | asset_url }}" defer="defer"></script>
+{{ 'best-sellers-scroll.js' | asset_url | script_tag }}
 
 {% schema %}
 {
