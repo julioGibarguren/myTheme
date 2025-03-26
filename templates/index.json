@@ -57,6 +57,66 @@
             "sale_badge_text": "Save 15%"
           }
         },
+        "product_fmqfyd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
+            "title": "Product name",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
+        "product_B3qfDy": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
+            "title": "Product name",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
+        "product_W7V94E": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
+            "title": "Product name",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
+        "product_HyyTcg": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
+            "title": "Product name",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
         "product_6nWFUX": {
           "type": "product",
           "settings": {
@@ -107,6 +167,10 @@
         "product_1",
         "product_2",
         "product_pzyxTa",
+        "product_fmqfyd",
+        "product_B3qfDy",
+        "product_W7V94E",
+        "product_HyyTcg",
         "product_6nWFUX",
         "product_3",
         "product_b8pJkq"
