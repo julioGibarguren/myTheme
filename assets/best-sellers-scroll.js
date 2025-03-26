@@ -1,22 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Image swap functionality
     const productImages = document.querySelectorAll('.product-image');
-    productImages.forEach(img => {
-        img.addEventListener('mouseover', function () {
-            const primaryImg = this.getAttribute('data-primary-img');
-            const secondaryImg = this.getAttribute('data-secondary-img');
-
-            if (this.src === primaryImg) {
+    
+    productImages.forEach(image => {
+        const primaryImg = image.getAttribute('data-primary-img');
+        const secondaryImg = image.getAttribute('data-secondary-img');
+        
+        if (primaryImg && secondaryImg) {
+            image.addEventListener('mouseover', function() {
                 this.src = secondaryImg;
-            } else {
+            });
+            
+            image.addEventListener('mouseout', function() {
                 this.src = primaryImg;
-            }
-        });
-
-        img.addEventListener('mouseout', function () {
-            const primaryImg = this.getAttribute('data-primary-img');
-            this.src = primaryImg;
-        });
+            });
+        }
     });
 
     // Custom scrollbar functionality
