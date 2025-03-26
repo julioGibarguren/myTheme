@@ -1,0 +1,443 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .best-sellers {
+    padding: 2rem 0;
+  }
+
+  .best-sellers__heading {
+    padding: 0 2rem 0.5rem;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__heading {
+      font-size: 3rem;
+      text-align: left;
+    }
+  }
+
+  .best-sellers__container {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  .best-sellers__grid-wrapper {
+    position: relative;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .best-sellers__grid-wrapper.collapsed {
+    max-height: 1000px;
+  }
+
+  .best-sellers__grid-wrapper.expanded {
+    max-height: none;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__grid-wrapper {
+      max-height: none;
+    }
+  }
+
+  .best-sellers__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .best-sellers__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__grid {
+      grid-template-columns: repeat(10, 355px);
+    }
+  }
+
+  .best-sellers__product {
+    width: 100%;
+    aspect-ratio: 0.76;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__product {
+      height: 467px;
+      aspect-ratio: auto;
+    }
+  }
+
+  .best-sellers__badge {
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    border-radius: 9999px;
+    top: 6px;
+    left: 6px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 2px 8px;
+    font-family: var(--font-heading);
+  }
+
+  .best-sellers__badge--sale {
+    background: #5C7962;
+    color: white;
+    left: auto;
+    right: 6px;
+  }
+
+  .best-sellers__image-wrapper {
+    width: 100%;
+    height: 355px;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 1;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__image-wrapper {
+      aspect-ratio: auto;
+    }
+  }
+
+  .best-sellers__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .best-sellers__content {
+    padding: 0.75rem;
+  }
+
+  .best-sellers__title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-heading);
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__title {
+      font-size: 1.125rem;
+    }
+  }
+
+  .best-sellers__rating {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+
+  .best-sellers__stars {
+    display: flex;
+    align-items: center;
+  }
+
+  .best-sellers__star {
+    height: 9px;
+    width: 9px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__star {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .best-sellers__reviews {
+    font-size: 11px;
+    margin-left: 0.5rem;
+    font-family: var(--font-body);
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__reviews {
+      font-size: 0.75rem;
+    }
+  }
+
+  .best-sellers__price {
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  .best-sellers__scrollbar {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    height: 0.5rem;
+    background: rgba(243, 244, 246, 0.5);
+    border-radius: 9999px;
+    display: none;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__scrollbar {
+      display: block;
+    }
+  }
+
+  .best-sellers__scrollbar-thumb {
+    position: absolute;
+    height: 0.25rem;
+    background: rgba(156, 163, 175, 0.5);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 10%;
+  }
+
+  .best-sellers__scrollbar-thumb:hover {
+    height: 0.375rem;
+    background: rgba(107, 114, 128, 0.8);
+  }
+
+  .best-sellers__toggle {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: #1C1D1D;
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+    display: none;
+  }
+
+  .best-sellers__toggle:hover {
+    background: #374151;
+  }
+
+  @media screen and (min-width: 990px) {
+    .best-sellers__toggle {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="best-sellers">
+    {%- if section.settings.title != blank -%}
+      <h2 class="best-sellers__heading">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="best-sellers__container">
+      <div class="best-sellers__grid-wrapper" id="gridWrapper">
+        <div class="best-sellers__grid" id="productGrid">
+          {%- for block in section.blocks -%}
+            <article class="best-sellers__product" {{ block.shopify_attributes }}>
+              {%- if block.settings.show_badge -%}
+                <span class="best-sellers__badge">{{ block.settings.badge_text }}</span>
+              {%- endif -%}
+              {%- if block.settings.show_sale_badge -%}
+                <span class="best-sellers__badge best-sellers__badge--sale">{{ block.settings.sale_badge_text }}</span>
+              {%- endif -%}
+              
+              <div class="best-sellers__image-wrapper">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 355 | image_tag:
+                    loading: 'lazy',
+                    class: 'best-sellers__image product-image',
+                    width: 355,
+                    height: 355,
+                    data_primary_img: block.settings.image | image_url: width: 355,
+                    data_secondary_img: block.settings.secondary_image | default: block.settings.image | image_url: width: 355
+                  }}
+                {%- endif -%}
+              </div>
+
+              <div class="best-sellers__content">
+                {%- if block.settings.title != blank -%}
+                  <h3 class="best-sellers__title">{{ block.settings.title }}</h3>
+                {%- endif -%}
+
+                <div class="best-sellers__rating">
+                  <ul class="best-sellers__stars">
+                    {%- for i in (1..5) -%}
+                      <li>
+                        {%- if i <= block.settings.rating -%}
+                          {{ 'iconmonstr-star-filled.svg' | asset_url | img_tag: 'Star rating', 'best-sellers__star' }}
+                        {%- else -%}
+                          {{ 'iconmonstr-star-lined.svg' | asset_url | img_tag: 'Star rating', 'best-sellers__star' }}
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                  {%- if block.settings.review_count != blank -%}
+                    <p class="best-sellers__reviews">{{ block.settings.review_count }} Reviews</p>
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.price != blank -%}
+                  <p class="best-sellers__price">{{ block.settings.price }}</p>
+                {%- endif -%}
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
+
+        <div class="best-sellers__scrollbar">
+          <div class="best-sellers__scrollbar-thumb" id="scrollbarThumb"></div>
+        </div>
+      </div>
+
+      <button class="best-sellers__toggle" id="toggleButton" aria-expanded="false">
+        Show More
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'best-sellers-scroll.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Best Sellers Scroll",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image"
+        },
+        {
+          "type": "image_picker",
+          "id": "secondary_image",
+          "label": "Secondary image (hover)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product title",
+          "default": "Product name"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "label": "Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "review_count",
+          "label": "Review count",
+          "default": "1,453 Reviews"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$104.95"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_badge",
+          "label": "Show badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge text",
+          "default": "Best seller"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sale_badge",
+          "label": "Show sale badge",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "sale_badge_text",
+          "label": "Sale badge text",
+          "default": "Save 15%"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Best Sellers Scroll",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

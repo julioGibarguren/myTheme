@@ -103,11 +103,69 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "best_sellers_scroll": {
+      "type": "best-sellers-scroll",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "image": "",
+            "title": "Product 1",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": false,
+            "sale_badge_text": "Save 15%"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "image": "",
+            "title": "Product 2",
+            "rating": 4,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": true,
+            "sale_badge_text": "Save 15%"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "image": "",
+            "title": "Product 3",
+            "rating": 5,
+            "review_count": "1,453 Reviews",
+            "price": "$104.95",
+            "show_badge": true,
+            "badge_text": "Best seller",
+            "show_sale_badge": true,
+            "sale_badge_text": "Save 15%"
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "title": "Best Sellers",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "featured_collection_yXgQ7i"
+    "featured_collection_yXgQ7i",
+    "best_sellers_scroll"
   ]
 }
