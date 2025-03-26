@@ -60,7 +60,7 @@
         "product_fmqfyd": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "image": "shopify://shop_images/young-woman-holding-sunglasses.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
             "title": "Velvet Touch Luxe Blazer",
             "rating": 5,
@@ -75,7 +75,7 @@
         "product_B3qfDy": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "image": "shopify://shop_images/model-in-gold-fashion.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
             "title": "Sunset Breeze Cotton Maxi Dress",
             "rating": 5,
@@ -90,7 +90,7 @@
         "product_W7V94E": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "image": "shopify://shop_images/fashion-portrait.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
             "title": "Urban Chic Cropped Hoodie",
             "rating": 5,
@@ -105,7 +105,7 @@
         "product_HyyTcg": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "image": "shopify://shop_images/bright-floral-womens-summer-fashion.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
             "title": "Serenity Linen Button-Down Shirt",
             "rating": 5,
