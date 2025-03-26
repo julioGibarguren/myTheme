@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
             "secondary_image": "shopify://shop_images/studded-flats.jpg",
-            "title": "Product 1",
+            "title": "Cozy Cloud Knit Sweater",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -32,7 +32,7 @@
           "settings": {
             "image": "shopify://shop_images/model-laughs-barefoot.jpg",
             "secondary_image": "shopify://shop_images/boots-on-blue.jpg",
-            "title": "Product 2",
+            "title": "Ethereal Silk Slip Dress",
             "rating": 4,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -47,13 +47,13 @@
           "settings": {
             "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
-            "title": "Product name",
+            "title": "Midnight Denim High-Rise Jeans",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
             "show_badge": true,
             "badge_text": "Best seller",
-            "show_sale_badge": false,
+            "show_sale_badge": true,
             "sale_badge_text": "Save 15%"
           }
         },
@@ -62,13 +62,13 @@
           "settings": {
             "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
-            "title": "Product name",
+            "title": "Velvet Touch Luxe Blazer",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
             "show_badge": true,
             "badge_text": "Best seller",
-            "show_sale_badge": false,
+            "show_sale_badge": true,
             "sale_badge_text": "Save 15%"
           }
         },
@@ -77,7 +77,7 @@
           "settings": {
             "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
-            "title": "Product name",
+            "title": "Sunset Breeze Cotton Maxi Dress",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -92,7 +92,7 @@
           "settings": {
             "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
-            "title": "Product name",
+            "title": "Urban Chic Cropped Hoodie",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -107,7 +107,7 @@
           "settings": {
             "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "secondary_image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
-            "title": "Product name",
+            "title": "Serenity Linen Button-Down Shirt",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -122,7 +122,7 @@
           "settings": {
             "image": "shopify://shop_images/autumn-photographer-taking-picture.jpg",
             "secondary_image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "title": "Product name",
+            "title": "Golden Hour Pleated Midi Skirt",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -137,7 +137,7 @@
           "settings": {
             "image": "shopify://shop_images/woman-infront-of-tree-with-berries.jpeg",
             "secondary_image": "shopify://shop_images/a-model-in-khakis-holding-orchids.jpg",
-            "title": "Product 3",
+            "title": "Dreamy Wraparound Knit Cardigan",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
@@ -152,7 +152,7 @@
           "settings": {
             "image": "shopify://shop_images/model-in-neutral-colors-by-window.jpg",
             "secondary_image": "shopify://shop_images/stylish-summer-necklace.jpg",
-            "title": "Product 3",
+            "title": "Stormy Grey Bomber Jacket",
             "rating": 5,
             "review_count": "1,453 Reviews",
             "price": "$104.95",
